@@ -1,0 +1,62 @@
+/* Backgrond = #7B2335   / cs sss  */
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    color:#F3A49D ;
+    font-size: 42px;
+}
+
+.button {
+    color: white;
+    background-color: #8A363A;
+    border: none;
+    border-radius: 5px;
+    padding: 20px 50px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.button:hover{
+    background-color:#7B2335 ;
+}
+
+input {
+    padding: 5px 10px;
+}
+
+#div1{
+    text-align: center;
+
+}
+
+h1{
+    text-align: center;
+}
+
+#body{
+    background-color:azure
+}
+
+.label{
+    color: #B66E49;
+}
+
+.input{
+    padding: 5px 30px;
+    margin:6px 10px;
+
+}
+footer{
+    text-align: center;
+    margin-top: 110px;
+}
+
