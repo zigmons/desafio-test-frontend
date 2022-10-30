@@ -48,11 +48,16 @@ h1{
 
 .label{
     color: #B66E49;
+    position:absolute;
+    margin: auto;
 }
 
 .input{
     padding: 5px 30px;
-    margin:6px 10px;
+    margin:20px 10px;
+    border-radius: 2%;
+    border: #7B2335;
+    position:relative;
 
 }
 footer{
@@ -60,3 +65,11 @@ footer{
     margin-top: 110px;
 }
 
+
+#infos{
+    color: red;
+}
+
+#label_1{
+    border: green;
+}
