@@ -9,20 +9,25 @@ function btn(){
     let nome1 = nome.value
     let juros = 0.00517
     
-    if (nome1 == "" || typeof nome1 == "number") { 
-        let div = document.getElementById('infos')
-        let h4 = div.innerHTML = `<h4>Por favor, preencha seu nome!</h4>`
-    }else if(mensalidade2 == "" || contribuicao1 ==""){
-        let div = document.getElementById('infos')
-        let h4 = div.innerHTML = `<h4>Por favor, preencha os campos de mensalidade e tempo de contribuição!</h4>`
+    if(nome1.match(/^[a-zA-Z_ ]*$/)){
+        if (nome1 == "") { 
+            let div = document.getElementById('infos')
+            let h4 = div.innerHTML = `<h4>Por favor, preencha seu nome!</h4>`
+        }else if(mensalidade2 == "" || contribuicao1 ==""){
+            let div = document.getElementById('infos')
+            let h4 = div.innerHTML = `<h4>Por favor, preencha os campos de mensalidade e tempo de contribuição!</h4>`
+        }else{
+            let expr = parseFloat(mensalidade1 * (((1 + juros) ** [contribuicao2] - 1) / juros).toFixed(3))
+            let div = document.getElementById('div1')
+            let h4 = div.innerHTML = `<h4>Olá ${nome1}, juntando R$ ${mensalidade1} todo mês, você terá R$ ${expr.toFixed(2)} em ${contribuicao1} anos</h4>
+            <button class="button" type="button" onclick="voltar()">Simular Novamente!</button>`
+        }
     }else{
-        let expr = parseFloat(mensalidade1 * (((1 + juros) ** [contribuicao2] - 1) / juros).toFixed(3))
-        let div = document.getElementById('div1')
-        let h4 = div.innerHTML = `<h4>Olá ${nome1}, juntando R$ ${mensalidade1} todo mês, você terá R$ ${expr.toFixed(2)} em ${contribuicao1} anos</h4>
-        <button class="button" type="button" onclick="voltar()">Simular Novamente!</button>`
+        let div = document.getElementById('infos')
+        let h4 = div.innerHTML = `<h4>Nome deve conter apenas letas, sem numeros!</h4>`
+
     }
 }
-
 function voltar(){
     let div = document.getElementById('body')
     let h4 = div.innerHTML = `    <body id="body">
